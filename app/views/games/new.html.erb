@@ -1,0 +1,7 @@
+<%= form_for @game do |form| %>
+  <div>
+	  <%= form.label :team %>
+	  <%= form.text_field :team %>
+  </div>
+  <%= form.submit 'Save' %>
+<% end %>
