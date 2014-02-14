@@ -15,4 +15,7 @@ feature "creating a new game to score" do
 
 		expect(page).to have_css('.team')
 	end
+
+	scenario "includes creating the lineup" do
+	end
 end
