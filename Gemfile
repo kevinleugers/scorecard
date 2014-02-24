@@ -10,6 +10,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 gem 'high_voltage'
 gem 'clearance'
+gem 'foundation-rails'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

@@ -1,32 +1,4 @@
 <h2 class="team"><%= @game.team %></h2>
 <%= button_to 'Add Player', new_game_player_path(@game), method: 'get' %>
 
-<div class = "lineup">
-	<div id="lineup_1">
-	</div>
-
-	<div id="lineup_2">
-	</div>
-
-	<div id="lineup_3">
-		Joey Votto
-	</div>
-
-	<div id="lineup_4">
-	</div>
-
-	<div id="lineup_5">
-	</div>
-
-	<div id="lineup_6">
-	</div>
-
-	<div id="lineup_7">
-	</div>
-
-	<div id="lineup_8">
-	</div>
-
-	<div id="lineup_9">
-	</div>
-</div>
+<%= render @game.lineup %>
