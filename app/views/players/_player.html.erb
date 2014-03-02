@@ -1,3 +1,6 @@
 <%= div_for player do %>
-	<b><%= player.name %></b> - <%= player.position %>
+	<div><b><%= player.name %></b> - <%= player.position %></div>
+	<div class="at_bats">
+		<%= render player.at_bats %>
+		<%= link_to 'New AB', new_game_at_bat_path(player.game_id, player.id) %></div>
 <% end %>

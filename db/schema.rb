@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140217194416) do
+ActiveRecord::Schema.define(version: 20140302131635) do
+
+  create_table "at_bats", force: true do |t|
+    t.string   "result"
+    t.integer  "base"
+    t.string   "note"
+    t.integer  "inning"
+    t.integer  "player_id"
+    t.integer  "game_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "at_bats", ["player_id"], name: "index_at_bats_on_player_id"
 
   create_table "games", force: true do |t|
     t.string   "team"

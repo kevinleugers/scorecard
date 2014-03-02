@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'high_voltage'
 gem 'clearance'
 gem 'foundation-rails'
+gem 'pry'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -24,4 +25,9 @@ end
 group :test do
 	gem 'capybara'
 	gem 'spork-rails'
+end
+
+group :development do
+	gem 'rails-footnotes'
+	gem 'better_errors'
 end
