@@ -21,15 +21,8 @@ feature "creating a new game to score" do
 		fill_in 'Lineup spot', with: '3'
 		click_button "Save"
 
-		within '#lineup_3' do
+		within '.lineup' do
 			expect(page).to have_content('Joey Votto')
 		end
 	end
-end
-
-def new_game team="Cincinnati Reds"
-	visit root_path
-	click_button "New Game"
-	fill_in 'Team', with: team
-	click_button "Save"
 end

@@ -25,6 +25,7 @@ end
 group :test do
 	gem 'capybara'
 	gem 'spork-rails'
+	gem 'factory_girl_rails', '~> 4.0'
 end
 
 group :development do
