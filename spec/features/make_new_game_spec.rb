@@ -15,14 +15,15 @@ feature "creating a new game to score" do
 
 	scenario "includes creating the lineup" do
 		new_game
+
 		click_button "Add Player"
-		fill_in 'Name', with: "Joey Votto"
+		fill_in 'Name', with: "Kevin Leugers"
 		fill_in 'Position', with: '1B'
 		fill_in 'Lineup spot', with: '3'
 		click_button "Save"
 
 		within '.lineup' do
-			expect(page).to have_content('Joey Votto')
+			expect(page).to have_content('Kevin Leugers')
 		end
 	end
 end

@@ -1,5 +1,5 @@
 module CreateGameHelpers
-	def new_game team="Cincinnati Reds"
+	def new_game_and_lineup
 	  game = create(:game)
 		create(:player, game: game, name: "Billy Hamilton", position: "CF", lineup_spot: 1)
 		create(:player, game: game, name: "Brandon Phillips", position: "2B", lineup_spot: 2)
@@ -11,6 +11,13 @@ module CreateGameHelpers
 		create(:player, game: game, name: "Zack Cozart", position: "SS", lineup_spot: 8)
 		create(:player, game: game, name: "Homer Bailey", position: "P", lineup_spot: 9)
 		game
+	end
+
+	def new_game team="Cincinnati Reds"
+		visit root_path
+		click_button 'New Game'
+		fill_in 'Team', with: team
+    click_button 'Save'
 	end
 end
 
