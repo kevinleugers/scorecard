@@ -1,11 +1,11 @@
 class Lineup
 	include ActiveModel::Model
 
-	def initialize game
-		@game = game
+	def initialize players
+		@players = players
 	end
 
-	def players
-		@game.players.order(:lineup_spot)
+	def batting_order
+		@players.order(:lineup_spot)
 	end
 end

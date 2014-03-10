@@ -11,14 +11,17 @@ gem 'jbuilder', '~> 1.2'
 gem 'high_voltage'
 gem 'clearance'
 gem 'foundation-rails'
-gem 'pry'
 
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
+
+group :development do
+	gem 'rails-footnotes'
+	gem 'better_errors'
+	gem 'spring'
+	gem 'spring-commands-rspec'
+	gem 'pry-rails'
 end
 
-group :test, :development do
+group :development, :test do
 	gem 'rspec-rails'
 end
 
@@ -26,9 +29,6 @@ group :test do
 	gem 'capybara'
 	gem 'spork-rails'
 	gem 'factory_girl_rails', '~> 4.0'
+	gem 'shoulda-matchers'
 end
 
-group :development do
-	gem 'rails-footnotes'
-	gem 'better_errors'
-end
