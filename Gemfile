@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'high_voltage'
 gem 'clearance'
 gem 'foundation-rails'
+gem 'simple_form'
 
 
 group :development do

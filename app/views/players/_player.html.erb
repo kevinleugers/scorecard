@@ -1,6 +1,20 @@
-<%= div_for player do %>
-	<div><b><%= player.name %></b> - <%= player.position %></div>
-	<div class="at_bats">
-		<%= render player.at_bats %>
-		<%= link_to 'New AB', new_game_at_bat_path(player.game_id, player.id) %></div>
-<% end %>
+<div class="row">
+		<%= div_for player do %>
+
+			<div class="small-4 columns">
+				<div><% if player.in_game? %>
+					<%= player.lineup_spot %>) 
+				     <% end %>
+				     <b><%= player.name %></b> - <%= player.position %>
+		     		</div>
+				<p><%= button_to 'Delete Player', game_player_path(player.game_id, player.id), :method => :delete %>
+			</div>
+			<div class="small-8 columns">
+				<div class="at_bats">
+					<%= render player.at_bats %>
+					<%= link_to 'New AB', new_game_at_bat_path(player.game_id, player.id) %>
+				</div>
+			</div>
+		<% end %>
+</div>
+<hr />

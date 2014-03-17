@@ -17,6 +17,12 @@ class GamesController < ApplicationController
 		@game = Game.find(params[:id])
 	end
 
+	def substitution
+		@game = Game.find(params[:game_id])
+		@out = Player.new
+		@in = Player.new
+	end
+
 	private
 
 	def game_params

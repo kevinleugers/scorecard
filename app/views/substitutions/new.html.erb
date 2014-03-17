@@ -1,0 +1,5 @@
+<%= simple_form_for :substitution, url: game_substitution_path do |f| %>
+	<%= f.input :sub_out, as: :radio_buttons, collection: @substitution.batting_order, wrapper_html: {class:'batting_order'}  %>
+	<%= f.input :sub_in, as: :radio_buttons, collection: @substitution.game.lineup.players_on_bench, wrapper_html: {class:'bench'}  %>
+	<%= f.submit %>
+<% end %>

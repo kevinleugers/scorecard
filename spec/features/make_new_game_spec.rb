@@ -26,4 +26,17 @@ feature "creating a new game to score" do
 			expect(page).to have_content('Kevin Leugers')
 		end
 	end
+
+	scenario "allows for deleting a player from the lineup" do
+		game = new_game_and_lineup
+		player = game.players.first
+
+		visit game_path(game.id)
+		within "#player_#{player.id}" do
+			click_button 'Delete Player'
+		end
+		within ".lineup" do
+			expect(page).to_not have_content(player.name)
+		end
+	end
 end
