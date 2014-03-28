@@ -8,6 +8,7 @@ feature 'adding at bats to the game' do
 			click_link 'New AB'
 		end
 		fill_in 'Result', with: 'Single'
+		fill_in 'Inning', with: '1'
 		click_button 'Save'
 
 		within('#player_1') do

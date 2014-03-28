@@ -11,12 +11,13 @@ class Substitution
 	end
 
 	def make_substitution
-		out = get_player sub_out
-		sub = get_player sub_in
-		sub.lineup_spot = out.lineup_spot
-		out.lineup_spot = "BENCH"
-		out.save
-		sub.save
+		sub_out_player = get_player sub_out
+		sub_in_player = get_player sub_in
+		sub_in_player.lineup_spot = sub_out_player.lineup_spot
+		sub_in_player.position = sub_out_player.position
+		sub_out_player.lineup_spot = "BENCH"
+		sub_out_player.save
+		sub_in_player.save
 	end
 
 	private

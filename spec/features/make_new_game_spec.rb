@@ -18,8 +18,8 @@ feature "creating a new game to score" do
 
 		click_button "Add Player"
 		fill_in 'Name', with: "Kevin Leugers"
-		fill_in 'Position', with: '1B'
-		fill_in 'Lineup spot', with: '3'
+		select('1B', :from => 'Position')
+		select('3', :from => 'Lineup spot')
 		click_button "Save"
 
 		within '.lineup' do
