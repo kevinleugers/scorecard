@@ -19,4 +19,7 @@ feature "making a player substitution in a game" do
 			expect(page).to have_content(sub.name)
 		end
 	end
+  scenario "test " do
+    #
+  end
 end
