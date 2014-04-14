@@ -15,21 +15,21 @@ gem 'simple_form'
 
 
 group :development do
-	gem 'rails-footnotes'
-	gem 'better_errors'
-	gem 'spring'
-	gem 'spring-commands-rspec'
-	gem 'pry-rails'
+  gem 'rails-footnotes'
+  gem 'better_errors'
+  gem 'spring'
+  gem 'spring-commands-rspec'
+  gem 'pry-rails'
 end
 
 group :development, :test do
-	gem 'rspec-rails'
+  gem 'rspec-rails'
 end
 
 group :test do
-	gem 'capybara'
-	gem 'spork-rails'
-	gem 'factory_girl_rails', '~> 4.0'
-	gem 'shoulda-matchers'
+  gem 'capybara'
+  gem 'spork-rails'
+  gem 'factory_girl_rails', '~> 4.0'
+  gem 'shoulda-matchers'
 end
 
