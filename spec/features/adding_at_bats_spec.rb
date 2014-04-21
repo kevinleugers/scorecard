@@ -7,8 +7,9 @@ feature 'adding at bats to the game' do
     within('#player_1') do
       click_link 'New AB'
     end
-    fill_in 'Result', with: 'Single'
-    fill_in 'Inning', with: '1'
+    select( '1', :from => 'Inning')
+    select('Single', :from => 'Result')
+    select('1', :from => 'Base')
     click_button 'Save'
 
     within('#player_1') do

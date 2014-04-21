@@ -1,12 +1,8 @@
-<%= form_for @at_bat, url: game_at_bats_path do |form| %>
-  <div>
-	  <%= form.label :result %>
-	  <%= form.text_field :result %>
-  </div>
-  <div>
-	  <%= form.label :inning %>
-	  <%= form.text_field :inning %>
-  </div>
+<%= simple_form_for @at_bat, url: game_at_bats_path do |form| %>
+  <%= form.input :inning, as: :select, collection: AtBat::INNINGS %>
+  <%= form.input :result, as: :select, collection: AtBat::RESULTS %>
+  <%= form.input :base, as: :select, collection: AtBat::BASES %>
+  <%= form.input :note %>
   <%= hidden_field_tag 'player_id', @at_bat.player_id %>
   <%= form.submit 'Save' %>
 <% end %>

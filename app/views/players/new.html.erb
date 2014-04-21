@@ -1,6 +1,6 @@
 <%= simple_form_for @player, url: game_players_path do |form| %>
- 	 <%= form.input :name %>
-	 <%= form.input :position, as: :select, collection: Player::POSITIONS %>
-	 <%= form.input :lineup_spot, as: :select, collection: Player::LINEUP_CHOICES %>
-	 <%= form.submit 'Save' %>
- <% end %>
+ <%= form.input :name %>
+ <%= form.input :position, as: :select, collection: Player::POSITIONS %>
+ <%= form.input :lineup_spot, as: :select, collection: Player::LINEUP_CHOICES %>
+ <%= form.submit 'Save' %>
+<% end %>
